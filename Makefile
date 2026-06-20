@@ -4,7 +4,6 @@ RANLIB ?= ranlib
 STRIP ?= strip
 
 CFLAGS += -I.
-LDFLAGS += -static
 
 ifdef EMBEDDED
 	CFLAGS += -DEMBEDDED
@@ -18,7 +17,7 @@ SRC = src/*.c
 
 shorkfetch: $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o shorkfetch $(LDFLAGS)
-	$(STRIP) shorkfetch
+	-$(STRIP) shorkfetch 2>/dev/null || true
 
 PREFIX ?= /usr
 BINDIR = $(PREFIX)/bin
