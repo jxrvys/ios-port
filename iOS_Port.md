@@ -19,7 +19,7 @@ iOS's SDK and sandboxing model differ from Linux in a few ways that broke the or
 
 ## Known limitations 
 
-shorkfetch pulls most of its system data (CPU, memory, uptime, GPU, display info) from Linux's `/proc` and `/sys` pseudo-filesystems, which don't exist on iOS/Darwin (which is the XNU kernel, not Linux if you didn't know). As a result, several fields will currently show as blank, "unknown," or generic defaults — this isn't something the patches above fix, since the underlying data source genuinely isn't there. OS, kernel version, shell, and disk usage do work correctly since they come from portable APIs.
+shorkfetch pulls most of its system data (CPU, memory, uptime, GPU, display info) from Linux's `/proc` and `/sys` pseudo-filesystems, which don't exist on iOS/Darwin (which is the XNU kernel). As a result, several fields will currently show as blank, "unknown," or generic defaults — this isn't something the patches above fix, since the underlying data source genuinely isn't there. OS, kernel version, shell, and disk usage do work correctly since they come from portable APIs.
 
 Possible future work (this probably wont happen, this was kinda a random project in my freetime): read CPU/memory/uptime via `sysctl` (e.g. `kern.boottime` for uptime) instead of `/proc`.
 
