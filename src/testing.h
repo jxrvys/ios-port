@@ -20,7 +20,7 @@
 
 #include <ctype.h>
 #include <dirent.h>
-#include <linux/limits.h>
+#include <limits.h>
 
 
 

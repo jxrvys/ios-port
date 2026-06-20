@@ -17,7 +17,7 @@
 #include "globals.h"
 
 #include <dirent.h>
-#include <linux/limits.h>
+#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -431,9 +431,9 @@ int isProgramInstalled(char *prog, int isExec)
     char *path = getenv("PATH");
     if (!path)
     {
-        char cmd[64];
-        snprintf(cmd, 64, "%s --version > /dev/null 2>&1", prog);
-        return (system(cmd) == 0);
+        // system() is unavailable on iOS; if $PATH isn't set we just can't
+        // do this fallback check, so assume not found.
+        return 0;
     }
 
     char *paths = strdup(path);
