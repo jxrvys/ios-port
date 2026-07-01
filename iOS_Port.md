@@ -25,7 +25,7 @@ Possible future work (this probably wont happen, this was kinda a random project
 
 ## Building on-device (rootless jailbreak)
 
-These notes assume OpenSSH + a Procursus-based package manager (Sileo/Zebra) and a `/var/jb` rootless layout.
+These notes assume OpenSSH (for simplicity) + a Procursus-based package manager (Sileo/Zebra) and a `/var/jb` rootless layout.
 
 1. Make sure you have a compiler and make:
    ```
