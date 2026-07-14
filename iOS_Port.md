@@ -2,7 +2,7 @@
 
 This branch contains the changes needed to build and run [shorkfetch](https://github.com/SharktasticA/shorkfetch) on a jailbroken iOS device (tested on a rootless jailbreak, iPhone 8 / iOS 16.7 with Dopamine-style `/var/jb` layout).
 
-All credit for shorkfetch itself goes to [SharktasticA](https://github.com/SharktasticA) — this is just a compatibility patch on top of their work.
+All credit for shorkfetch itself goes to [SharktasticA](https://github.com/SharktasticA)(duh, im not that smart)
 
 ## What had to change
 
